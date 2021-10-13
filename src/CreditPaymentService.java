@@ -6,7 +6,8 @@ public class CreditPaymentService {
         double y = Math.pow(formula1, -loanTerm); //возвели в степень
         double denominator = 1 - y;
         double MonthlyPayment = (loanAmount * monthlyInterestRate) / denominator; //ежемесячный платеж
+        double M = Math.round(MonthlyPayment); // целое число
 
-        return MonthlyPayment;
+        return M;
     }
 }
